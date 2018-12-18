@@ -1,0 +1,50 @@
+const assert = require('assert');
+const chai = require('chai');
+const chaiHttp = require('chai-http');
+const expect = chai.expect;
+const config = require('../config.js');
+const uuidv1 = require('uuid/v1');
+const crypto = require('crypto');
+const sha256 = require('sha256');
+const randomstring = require('randomstring')
+const chaiAsPromised = require("chai-as-promised");
+const randomprice = randomstring.generate({
+    length: 3,
+    charset: 'numeric'
+});
+const randomuuid = randomstring.generate({
+    length: 3,
+    });
+    chai.use(chaiAsPromised);
+    chai.should();
+
+    require('dotenv').config()
+
+    chai.use(chaiHttp);
+
+    describe('my real first test of Mocha', function () {
+                it('should return number opf characters in a string', function () {
+                    assert.equal('francis'.length, 7);
+
+                });
+                it('should return first character of the string', function () {
+                    assert.equal('Francis'.charAt(0), 'F')
+
+                });
+
+                it('should return third chacter of in a string ',  function () {
+                    assert.equal('Manager'.charAt(3), 'a')
+                    
+                })
+
+                it('should return last word at the end of the string', function () {
+                    assert.equal('Francis'.charAt(6) , 's' );
+                    // expected output: true
+                })
+           it('should return the 4 letter of the string', function () {
+               assert.equal('Royalhotel'.charAt(3), 'a');
+               
+           })
+            }
+
+);
