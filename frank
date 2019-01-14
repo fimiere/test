@@ -37,7 +37,7 @@ describe('my interview',  async ()  => {
         
     }
     );
-    it('update a ', async () => {
+    it('update  ', async () => {
         const result = await chai.request('https://jsonplaceholder.typicode.com/posts')
         .put('/1')
         .send(
